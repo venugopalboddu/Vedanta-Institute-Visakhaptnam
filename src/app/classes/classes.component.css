@@ -1,0 +1,62 @@
+.l_news_item {
+    -webkit-transition: all 400ms linear 0s;
+    -o-transition: all 400ms linear 0s;
+    transition: all 400ms linear 0s;
+  }
+  
+  .l_news_item .l_news_img {
+    overflow: hidden;
+  }
+  
+  .l_news_item .l_news_img a {
+    display: block;
+  }
+  
+  .l_news_item .l_news_img img {
+    -webkit-transition: all 400ms linear 0s;
+    -o-transition: all 400ms linear 0s;
+    transition: all 400ms linear 0s;
+  }
+  
+  .l_news_item .l_news_img img:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  
+  .l_news_item .l_news_content {
+    border: 1px solid #ebebeb;
+    border-top: 0px;
+    padding: 30px 35px;
+  }
+  
+  .l_news_item .l_news_content h4 {
+    font-size: 18px;
+    color: #232d37;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    -webkit-transition: all 400ms linear 0s;
+    -o-transition: all 400ms linear 0s;
+    transition: all 400ms linear 0s;
+  }
+  
+  .l_news_item .l_news_content h4:hover {
+    color: #2bc0a4;
+  }
+  
+  .l_news_item .l_news_content p {
+    font-size: 14px;
+    line-height: 26px;
+    color: #51545f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 15px 0px 10px 0px;
+  }
+  
+  .l_news_item:hover {
+    -webkit-box-shadow: 0px 25px 49px 0px rgba(58, 74, 88, 0.1);
+    box-shadow: 0px 25px 49px 0px rgba(58, 74, 88, 0.1);
+  }
+
+
+  

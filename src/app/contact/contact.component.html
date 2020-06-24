@@ -1,0 +1,185 @@
+<!-- Navigation
+    ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+      <div class="container"> 
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a class="navbar-brand page-scroll" style="margin-top: -12px">
+              <img src="http://vedantavisakhapatnam.org/img/om5.png" width="70px" height="70px">
+            </a>
+          <a class="navbar-brand page-scroll" href="#page-top" style="margin-top: 15px">
+            Vedanta<br/><p style="color:#FF5733">Institute Visakhapatnam</p></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html" class="page-scroll">Home</a></li>
+                  <li><a routerLink="/about" class="page-scroll">About</a></li>
+                  <li><a routerLink="/events" class="page-scroll">Events</a></li>
+                  <li><a routerLink="/classes" class="page-scroll">Classes</a></li>
+                  <li><a routerLink="/publications" class="page-scroll hidden-sm">Publications</a></li>
+                  <li><a href="https://www.vedantaworld.org/press" target="_blank" class="page-scroll hidden-sm">Press</a></li>
+                  <li class="nav-item active"><a routerLink="/contact" class="page-scroll">Contact</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse --> 
+      </div>
+    </nav><br/><br/><br/><br/>
+    <!-- Get Touch Section -->
+    <div id="get-touch">
+      <div class="container">
+        <div class="container">
+              <div class="text-center"></div><br/><br/>
+              <h3 class="text-center" style="color: black">You have got to lift yourself by yourself.</h3>
+          </div>
+      </div>
+    </div>
+  
+    <!-- Contact Section -->
+    <div id="contact">
+      <div class="container">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="section-title">
+              <h2>Get In Touch</h2>
+            </div>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" placeholder="Name" formControlName="name" class="form-control" [ngClass]="{ 'has-danger': submitted && cf.name.errors }"/>
+                    <div *ngIf="submitted && cf.name.errors" class="err">
+                      <div *ngIf="cf.name.errors.required">Name is required*</div>
+                      <div *ngIf="cf.name.errors.minlength">Atleast 6 characters*</div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" placeholder="Email" formControlName="email" class="form-control" [ngClass]="{ 'has-danger': submitted && cf.email.errors }" />
+                    <div *ngIf="submitted && cf.email.errors" class="err">
+                      <div *ngIf="cf.email.errors.required">Email is required*</div>
+                      <div *ngIf="cf.email.errors.email">Email must be a valid email address</div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Message" id="notes" formControlName="message" rows="6" [ngClass]="{ 'has-danger': submitted && cf.message.errors }"></textarea>
+                <div *ngIf="submitted && cf.message.errors" class="err">
+                  <div *ngIf="cf.message.errors.required">Message is required*</div>
+              </div>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-custom btn-lg">Send Message</button>
+              </div>
+            </form>
+            <div class="alert" role="alert" *ngIf="status1">
+              <strong>{{msg}}</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-md-offset-1 contact-info">
+          <div class="contact-item">
+            <h4>Contact Info</h4>
+            <p><b>F-403, Siri Enclave, Annam Raju Nagar,
+              Opp Asta Lakshmi Temple, Kommadi,<br>
+              Madhurawada,
+Visakhapatnam, 530048.</b></p>
+          </div>
+          <div class="contact-item">
+            <p><b>+91 9948150911, +91 7661901956</b></p>
+          </div>
+          <div class="contact-item">
+            <p><b>info.vedantainstitute@gmail.com</b></p>
+          </div>
+        </div>
+          
+        <div class="col-md-12 social1">
+            
+          <div class="row">   
+        <div class="section-title center">
+          <h2>Donate</h2>
+          <div *ngIf="status2">
+         <p><b>We request your kind support towards our endeavor to disseminate education on human values. For Donation through Online transfer account details click the below button.</b></p>
+         <button class="btn btn-custom btn-lg" routerLink="donate" (click)="myFunction()">Donate</button>
+        </div>
+         <router-outlet></router-outlet>
+         
+        </div>
+     </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="social">
+              <ul>
+                <li><a href="https://www.facebook.com/Vedantaworld/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/vedantaworld" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/vedanta.world/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/user/VedantaworldTV" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12" style="margin-top: 30px">
+          <div class="row">
+            <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15193.500790295384!2d83.3471948!3d17.821038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x77bc330a0d0d3dfd!2sVedanta+Institute+Visakhapatnam!5e0!3m2!1sen!2sin!4v1539530864486" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  
+    <div id="call-reservation" class="text-center" style="margin-top: -20px">
+      <div class="container">
+        <h2 style="color: black">Want to know any information? Call <strong>+91 9948150911</strong></h2>
+      </div>
+    </div>
+    <!-- Footer Section -->
+
+    <footer id="footer" class="footer">
+    <div class="container text-center">
+    <div class="row">
+      <div class="col-md-4">
+        <h4 style="color: #FFCC00;">Get In Touch With Us!</h4><br/>
+        <p>Touch to our mailing list to get the updates to your email inbox.</p>
+        
+        <a class="btn btn-custom btn-lg" href="mailto:info.vedantainstitute@gmail.com">Send Mail</a>
+        
+       </div>
+     
+     
+<div class="col-md-4">
+       <h4 style="color: #FFCC00;">Address</h4><br/>
+       <p>Vedanta Institute Visakhapatnam</p>
+            <p> F-403, Siri Enclave, Annam Raju Nagar<br>
+              Opp Asta Lakshmi Temple<br>
+              Madhurawada, Visakhapatnam<br/>
+              530048.
+         </p>
+       </div>
+<div class="col-md-4">
+       <h4 style="color: #FFCC00;">Contact Us</h4><br/>
+       <i class="fa fa-phone"></i> +91 9948150911<br>
+       <i class="fa fa-phone"></i> +91 7661901956<br>
+            <p><i class="fa fa-envelope"></i> <a href="mailto:info.vedantainstitute@gmail.com" style="text-decoration: none;padding: 1em">info.vedantainstitute@gmail.com</a></p>
+       </div>
+     
+    </div>
+
+      
+        <!-- End newsletter-form -->
+        <ul class="social-links">
+          <li><a href="https://twitter.com/vedantaworld" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
+          <li><a href="https://www.facebook.com/Vedantaworld/" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
+          <li><a href="https://www.youtube.com/user/VedantaworldTV" target="_blank"><i class="fa fa-youtube fa-fw"></i></a></li>
+          <li><a href="https://www.instagram.com/vedanta.world/" target="_blank"><i class="fa fa-instagram fa-fw"></i></a></li>
+        
+        </ul>
+        Copyright &copy;2020 All rights reserved | <a href="index.html" style="color: #FFCC00;">Vedanta Institute Visakhapatnam</a> | Developed By <a href="https://venugopalboddu.blogspot.com/" style="color: #FFCC00;" target="_blank">Venugopal Boddu</a>
+      </div>
+    </footer>
