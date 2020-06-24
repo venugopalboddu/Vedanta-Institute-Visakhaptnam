@@ -1,4 +1,4 @@
-# Vedanta-Institute-Visakhaptnam (Angular Web Application)
+# Angular-PHP Web Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
