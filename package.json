@@ -2,25 +2,35 @@
   "name": "vedanta-vizag",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "engines": {
+    "node": "12.14.0",
+    "npm": "6.13.4"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.11",
+    "@angular/cli": "~9.1.9",
     "@angular/common": "~9.1.11",
     "@angular/compiler": "~9.1.11",
+    "@angular/compiler-cli": "~9.1.11",
     "@angular/core": "~9.1.11",
     "@angular/forms": "~9.1.11",
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
+    "typescript": "~3.8.3",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
