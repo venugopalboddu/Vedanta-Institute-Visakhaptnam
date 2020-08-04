@@ -1,0 +1,36 @@
+@media (max-width:375px) {
+    .sus{
+        margin-top: -88px;
+    }
+    .footer{
+		margin-top: -91px;
+	}
+}
+
+@media (max-width:425px) {
+    .sus{
+        margin-top: -88px;
+    }
+    .footer{
+		margin-top: -91px;
+	}
+}
+
+@media (min-width:375px) and  (max-width:425px) { 
+    .mob{
+      margin-left: -25px;
+      margin-top: -15px;
+     }
+     .NavHead{
+      margin-top: -47px !important;
+      margin-left: 46px;
+     }
+     #menu {
+       padding-top: 26px;
+     }
+     #bs-example-navbar-collapse-1{
+       margin-top: 10px;
+     }
+  }
+
+  

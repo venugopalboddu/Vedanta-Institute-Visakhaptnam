@@ -22,3 +22,35 @@
         background-color: #98E389;
     }
   
+    @media (max-width:375px) {
+        #contact .section-title {
+            margin-top: -5.5rem;
+        }
+     
+     }
+     
+     @media (max-width:425px) {
+        #contact .section-title {
+            margin-top: -5.5rem;
+        }
+     }
+     #contact .container{
+         margin-top: -4rem;
+     }
+
+     @media (min-width:375px) and  (max-width:425px) { 
+        .mob{
+          margin-left: -25px;
+          margin-top: -15px;
+         }
+         .NavHead{
+          margin-top: -47px !important;
+          margin-left: 46px;
+         }
+         #menu {
+           padding-top: 26px;
+         }
+         #bs-example-navbar-collapse-1{
+           margin-top: 10px;
+         }
+      }

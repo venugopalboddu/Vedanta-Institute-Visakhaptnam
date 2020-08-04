@@ -62,6 +62,9 @@
   .blinking{
     animation:blinkingText 1.2s infinite;
 }
+.md-mainimg {
+  top: -1rem;
+ }
 @keyframes blinkingText{
     0%{     color: blue;    }
     49%{    color: blue; }
@@ -69,3 +72,46 @@
     99%{    color:transparent;  }
     100%{   color: blue;    }
 }
+
+
+@media (max-width:425px) { 
+  .md-mainimg {
+    top: 1rem;
+   }
+  .mob{
+    margin-left: -25px;
+    margin-top: -15px;
+   }
+   .NavHead{
+    margin-top: -47px !important;
+    margin-left: 46px;
+   }
+   #menu {
+     padding-top: 26px;
+   }
+   #bs-example-navbar-collapse-1{
+     margin-top: 10px;
+   }
+}
+@media (max-width:375px){
+  .md-mainimg {
+    top: 1rem;
+   }
+  .mob{
+    margin-left: -25px;
+    margin-top: -15px;
+   }
+   .NavHead{
+    margin-top: -36px !important;
+    margin-left: 46px;
+   }
+   #menu {
+     padding-top: 26px;
+   }
+   #bs-example-navbar-collapse-1{
+     margin-top: 10px;
+   }
+
+}
+
+

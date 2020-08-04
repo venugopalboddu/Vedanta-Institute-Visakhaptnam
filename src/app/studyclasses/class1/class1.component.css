@@ -21,4 +21,20 @@
     .alert {
         background-color: #98E389;
     }
-  
+    
+    @media (min-width:375px) and  (max-width:425px) { 
+        .mob{
+          margin-left: -25px;
+          margin-top: -15px;
+         }
+         .NavHead{
+          margin-top: -47px !important;
+          margin-left: 46px;
+         }
+         #menu {
+           padding-top: 26px;
+         }
+         #bs-example-navbar-collapse-1{
+           margin-top: 10px;
+         }
+      }

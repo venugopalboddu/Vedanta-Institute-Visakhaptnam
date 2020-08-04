@@ -137,6 +137,7 @@ hr {
 	border-radius: 0px;
 	transition: all 0.3s;
 	border:2px solid #FFCC00;
+	border-radius: 10rem;
 }
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
 	color: #333;
@@ -263,6 +264,7 @@ header .intro-text {
 #about p {
 	line-height: 24px;
 	margin: 30px 0;
+	text-align: justify;
 }
 
 
@@ -272,6 +274,7 @@ header .intro-text {
 	background: url(../img/services-bg.html);
 	background-size: cover;
 	background-attachment: fixed;
+
 }
 #car-types .single-car {
 	border: 1px solid #ddd;
@@ -287,6 +290,7 @@ header .intro-text {
 }
 #car-types p {
 	color: #333;
+	text-align: justify;
 }
 .space {
 	margin-top: 40px;
@@ -635,4 +639,22 @@ Footer
 #get-touch {
   text-align: center;
 }
+}
+
+@media (max-width:375px) {
+	
+	#car-types {
+		margin-left: 1rem;
+		padding-right: 1rem;
+	}
+
+}
+
+@media (max-width:425px) {
+	
+	#car-types {
+		margin-left: 1rem;
+		padding-right: 1rem;	
+	}
+	
 }
