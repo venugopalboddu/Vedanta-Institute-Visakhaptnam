@@ -63,7 +63,7 @@ hr {
 }
 /* Navigation */
 #menu {
-	padding: 20px;
+	padding: 9px;
 	transition: all 0.8s;
 }
 #menu.navbar-default {
@@ -267,6 +267,57 @@ header .intro-text {
 	text-align: justify;
 }
 
+/* Event Section */
+#event {
+	padding: 40px 0;
+	background: #f6f6f6;
+}
+#event h3 {
+	font-size: 22px;
+	margin: 0 0 20px 0;
+}
+#event h2 {
+	position: relative;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+#event h2::after {
+	position: absolute;
+	content: "";
+	background-color: #FFCC00;
+	height: 3px;
+	width: 50px;
+	bottom: -1px;
+	left: 0;
+}
+#event .event-text li {
+	margin-bottom: 6px;
+	margin-left: 6px;
+	list-style: none;
+	padding: 0;
+}
+#event .event-text li:before {
+	content: '\f00c';
+	font-family: 'FontAwesome';
+	color: #1f386e;
+	font-size: 11px;
+	font-weight: 300;
+	padding-right: 8px;
+}
+#event img {
+	padding: 12px;
+	width: 400px;
+	margin-top: 10px;
+	background: #fff;
+	border-right: 0;
+	box-shadow: 0 0 50px rgba(0,0,0,0.06);
+}
+#event p {
+	line-height: 24px;
+	margin: 30px 0;
+	text-align: justify;
+}
 
 /* Car types */
 #car-types {

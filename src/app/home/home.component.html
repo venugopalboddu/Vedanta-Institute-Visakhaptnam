@@ -72,10 +72,52 @@
   </section>
     </div>
   </div>
+  <!-- <br/><br/><br/><br/> -->
    <!-- Slideshow -->    
-       
+
+   <!-- Event Section -->
+   <div id="event">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="event-text">
+            <h2>Bhagavad Gita Chapter 9</h2>
+            <h3>Dr YVS Murthy Auditorium</h3>
+            <h4>Andhra University College of Engineering</h4>
+            <h4>Visakhapatnam</h4>
+            <h3>07 to 10 Dec 2023</h3>
+            <h3>6:30PM to 7:45PM</h3>
+            <div id="clockdiv">
+            <div>
+              <span class="days" id="day">{{days}}</span>
+              <div class="smalltext">Days</div>
+            </div>
+            <div>
+              <span class="hours" id="hour">{{hours}}</span>
+              <div class="smalltext">Hours</div>
+            </div>
+            <div>
+              <span class="minutes" id="minute">{{minutes}}</span>
+              <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+              <span class="seconds" id="second">{{seconds}}</span>
+              <div class="smalltext">Seconds</div>
+            </div>
+          </div><br/><br/>
+          <h4 *ngIf="timeup != undefined" style="color: red;">{{timeup}}</h4>
+            <a *ngIf="timeup == undefined" class="btn btn-custom btn-lg" href="https://forms.gle/oaAyAZF3reMwgiSL6" target="/blank">Register now</a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6" *ngIf="timeup != undefined"><img src="assets/img/vizag_event.jpg" class="img-responsive" alt=""></div>
+        <div class="col-xs-12 col-md-6" *ngIf="timeup == undefined"><a href="https://forms.gle/oaAyAZF3reMwgiSL6" target="_blank"><img src="assets/img/vizag_event.jpg" class="img-responsive" alt=""></a></div>
+      </div>
+    </div>
+  </div>
+   <!-- Event Section -->
+
     <!-- Services Section -->
-    <div id="services" style="margin-top: -200px">
+    <div id="services" style="margin-top: -310px">
       <div class="container" id="car-types">
         <div class="section-title">
             <!-- <marquee width="100%" direction="left" height="100px" onmouseover="this.stop();" onmouseout="this.start();" style="
@@ -113,12 +155,11 @@
             </div>
             <div class="col-md-4">
                 <div class="l_news_item">
-                    <div class="l_news_img"><img class="img-fluid" src="assets/img/blog/l-news/cls.jpg" alt=""></div>
+                    <div class="l_news_img"><img class="img-fluid" src="assets/img/blog/l-news/satya.jpeg" alt=""></div>
               </div>
               <div class="single-car"> 
                 <h3 style="color: #FF5733">Classes</h3>
-                <p><b>The classes are conducted by S.V.Satyanarayana and S.Aruna
-                    (disciples of A. Parthasarathy).</b></p>
+                <p><b>The classes are conducted by S.V.Satyanarayana(disciple of A. Parthasarathy).</b></p>
                     <a class="btn btn-custom" routerLink="/classes">Read More</a>
               </div>
             </div>
