@@ -1,0 +1,22 @@
+:host { display: block; }
+.vi-footer { background: var(--ink); color: #c9cbe6; padding: 60px 0 28px; }
+.vi-footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+.vi-footer h4 { font-size: 1.5rem; color: var(--saffron); margin-bottom: 12px; }
+.vi-footer p { margin: 0 0 16px; }
+.vi-footer a { text-decoration: none; }
+.vi-footer p a:hover { color: var(--saffron); }
+.vi-footer i { color: var(--saffron); margin-right: 6px; }
+.vi-footer .vi-btn { color: var(--ink); }
+
+.vi-social { display: flex; justify-content: center; gap: 12px; list-style: none; margin: 44px 0 20px; padding: 0; }
+.vi-social a {
+  display: grid; place-items: center; width: 42px; height: 42px;
+  border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff; transition: background 0.2s, color 0.2s;
+}
+.vi-social a i { margin: 0; color: inherit; }
+.vi-social a:hover { background: var(--saffron); color: var(--ink); }
+.vi-copy { text-align: center; font-size: 0.9rem; margin: 0; }
+.vi-copy a { color: var(--saffron); }
+
+@media (max-width: 992px) { .vi-footer-grid { grid-template-columns: 1fr; } }

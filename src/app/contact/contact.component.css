@@ -1,44 +1,52 @@
-.video-container {
-  position: relative;
-  padding-bottom: 40.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-}
+:host { display: block; }
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
+.vi-contact-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: start; }
+
+.vi-form { display: grid; gap: 18px; margin-top: 8px; }
+.vi-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.vi-field label { display: block; margin-bottom: 6px; font-weight: 600; color: var(--ink); }
+.vi-field input,
+.vi-field textarea {
   width: 100%;
-  height: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: var(--white);
+  border: 1.5px solid rgba(21, 24, 59, 0.2);
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.vi-field input:focus,
+.vi-field textarea:focus { border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(244, 166, 42, 0.25); outline: none; }
+.vi-field .invalid { border-color: var(--ember); }
+.vi-err { margin-top: 6px; color: var(--ember); font-size: 0.92rem; }
+.vi-form .vi-btn { justify-self: start; }
+
+.vi-success {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-left: 4px solid #2e9e5b;
+  border-radius: 8px;
+  background: #e8f6ee;
+  color: #145c34;
 }
 
-.err {
-  color: red;
+.vi-info {
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: #c9cbe6;
 }
-.alert {
-  background-color: #98e389;
-}
+.vi-info h3 { color: var(--saffron); font-size: 1.7rem; margin-bottom: 14px; }
+.vi-info a { text-decoration: none; }
+.vi-info a:hover { color: var(--saffron); }
+.vi-info p:last-child { margin-bottom: 0; }
 
-@media (max-width: 375px) {
-  #contact .section-title {
-    margin-top: -5.5rem;
-  }
-}
+.vi-map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 16 / 7; background: var(--ink); }
+.vi-map iframe { width: 100%; height: 100%; border: 0; }
 
-@media (max-width: 425px) {
-  #contact .section-title {
-    margin-top: -5.5rem;
-  }
-  .am {
-    position: relative;
-    bottom: 45px;
-    left: 77px;
-  }
+@media (max-width: 992px) {
+  .vi-contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .vi-map { aspect-ratio: 4 / 3; }
 }
-#contact .container {
-  margin-top: -4rem;
-}
+@media (max-width: 640px) { .vi-form-row { grid-template-columns: 1fr; } }

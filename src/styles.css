@@ -1,2 +1,154 @@
-/* You can add global styles to this file, and also import other style files */
+/* =====================================================================
+   Vedanta Institute Visakhapatnam - global design system
+   Shared by every page. Page-specific styles live in each component.
+   ===================================================================== */
 
+:root {
+  --ink: #15183b;
+  --ink-2: #20255a;
+  --saffron: #f4a62a;
+  --saffron-deep: #d98512;
+  --ember: #d9482b;
+  --paper: #f5f6fb;
+  --white: #ffffff;
+  --text: #242744;
+  --muted: #5f6385;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(21, 24, 59, 0.08);
+  --display: 'Cormorant Garamond', Georgia, serif;
+  --body: 'Hind', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: var(--display); line-height: 1.12; margin: 0; color: var(--ink); }
+p { margin: 0 0 1rem; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--saffron);
+  outline-offset: 3px;
+}
+
+/* ---------- layout ---------- */
+.vi-wrap { width: min(1180px, 92%); margin: 0 auto; }
+.vi-narrow { max-width: 820px; }
+.vi-section { padding: 72px 0; }
+.vi-section-alt { background: var(--white); }
+
+.vi-heading { font-size: clamp(2rem, 3.8vw, 3rem); margin-bottom: 18px; }
+.vi-lead { font-size: 1.15rem; line-height: 1.85; max-width: 70ch; }
+.vi-accent { color: var(--ember); font-weight: 600; }
+
+/* ---------- buttons & links ---------- */
+.vi-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
+}
+.vi-btn:hover { transform: translateY(-2px); }
+.vi-btn-primary { background: var(--saffron); color: var(--ink); }
+.vi-btn-primary:hover { background: #ffbb4d; }
+.vi-btn-dark { background: var(--ink); color: var(--white); }
+.vi-btn-dark:hover { background: var(--ink-2); }
+.vi-btn-ghost { background: transparent; color: var(--white); border-color: rgba(255, 255, 255, 0.5); }
+.vi-btn-ghost:hover { border-color: var(--saffron); color: var(--saffron); }
+
+.vi-link {
+  align-self: flex-start;
+  font-weight: 600;
+  color: var(--ember);
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 1px;
+}
+.vi-link:hover { color: var(--ink); }
+
+/* ---------- image + text rows (about, classes, gallery intro) ---------- */
+.vi-split {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 2fr;
+  gap: 44px;
+  align-items: start;
+  padding: 36px 0;
+}
+.vi-split + .vi-split { border-top: 1px solid rgba(21, 24, 59, 0.12); }
+.vi-split img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
+.vi-split h2, .vi-split h3 { font-size: clamp(1.9rem, 3vw, 2.5rem); margin-bottom: 8px; }
+.vi-split p { color: var(--text); }
+.vi-meta { margin: 0 0 4px; }
+.vi-meta strong { color: var(--ink); }
+.vi-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: rgba(244, 166, 42, 0.22);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* ---------- cards ---------- */
+.vi-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.vi-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.vi-card-img {  overflow: hidden; background: var(--ink); }
+.vi-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.vi-card-body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 26px; }
+.vi-card h3 { font-size: 1.7rem; margin-bottom: 8px; }
+.vi-card p { margin: 0 0 18px; color: var(--muted); flex: 1; }
+
+/* ---------- call strip ---------- */
+.vi-call { background: var(--saffron); padding: 30px 0; text-align: center; }
+.vi-call p { margin: 0; font-family: var(--display); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 600; color: var(--ink); }
+.vi-call a { text-decoration: none; border-bottom: 2px solid var(--ink); }
+
+@media (max-width: 992px) {
+  .vi-card-grid { grid-template-columns: repeat(2, 1fr); }
+  .vi-split { grid-template-columns: 1fr; gap: 22px; }
+  .vi-split > img, .vi-split > .vi-split-img { max-width: 420px; }
+}
+@media (max-width: 640px) {
+  .vi-section { padding: 52px 0; }
+  .vi-card-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* home page sections that use shared tokens */
+.vi-cards { padding: 56px 0 84px; }
+.vi-section-title { font-size: clamp(2rem, 3.6vw, 2.8rem); margin-bottom: 34px; }

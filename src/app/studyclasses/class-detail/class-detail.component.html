@@ -1,0 +1,21 @@
+<ng-container *ngIf="studyClass">
+  <app-page-hero [title]="studyClass.title" [quote]="studyClass.area"></app-page-hero>
+
+  <section class="vi-section">
+    <div class="vi-wrap vi-class-grid">
+      <div class="vi-map">
+        <iframe [src]="mapUrl" [title]="'Map to the ' + studyClass.area + ' class'" loading="lazy"
+                allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div>
+        <span class="vi-tag">{{ studyClass.day }}</span>
+        <p class="vi-meta"><strong>Time:</strong> {{ studyClass.time }}</p>
+        <p class="vi-meta"><strong>Address:</strong> {{ studyClass.address }}</p>
+        <p class="vi-meta"><strong>Contact:</strong> {{ studyClass.contact }}</p>
+        <p class="vi-meta"><strong>Conducted by:</strong> {{ studyClass.conductedBy }}</p>
+        <a class="vi-btn vi-btn-dark vi-back" routerLink="/classes">All study classes</a>
+      </div>
+    </div>
+  </section>
+</ng-container>

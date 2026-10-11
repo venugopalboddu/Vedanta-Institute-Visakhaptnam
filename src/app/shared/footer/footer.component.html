@@ -1,0 +1,43 @@
+<footer class="vi-footer">
+  <div class="vi-wrap vi-footer-grid">
+    <div>
+      <h4>Stay in touch</h4>
+      <p>Join our mailing list to get updates in your inbox.</p>
+      <a class="vi-btn vi-btn-primary" href="mailto:info.vedantainstitute@gmail.com">Send mail</a>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>
+        Vedanta Institute Visakhapatnam<br>
+        F-403, Siri Enclave, Annam Raju Nagar<br>
+        Opp Asta Lakshmi Temple<br>
+        Madhurawada, Visakhapatnam 530048
+      </p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>
+        <i class="fa fa-phone"></i> <a href="tel:+919948150911">+91 9948150911</a><br>
+        <i class="fa fa-phone"></i> <a href="tel:+919666007932">+91 9666007932</a><br>
+        <i class="fa fa-envelope"></i> <a href="mailto:info.vedantainstitute@gmail.com">info.vedantainstitute&#64;gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="vi-wrap">
+    <ul class="vi-social">
+      <li *ngFor="let s of social">
+        <a [href]="s.url" target="_blank" rel="noopener" [attr.aria-label]="s.name">
+          <i class="fa fa-fw" [ngClass]="s.icon"></i>
+        </a>
+      </li>
+    </ul>
+    <p class="vi-copy">
+      &copy; {{ currentYear }} All rights reserved |
+      <a routerLink="/home">Vedanta Institute Visakhapatnam</a> |
+      Developed by <a href="https://venugopalboddu.blogspot.com/" target="_blank" rel="noopener">Venugopal Boddu</a>
+    </p>
+  </div>
+</footer>

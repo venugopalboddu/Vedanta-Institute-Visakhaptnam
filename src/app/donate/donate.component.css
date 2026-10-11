@@ -1,0 +1,8 @@
+:host { display: block; }
+.vi-donate-card { margin-top: 8px; padding: 28px; border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+.vi-note { color: var(--ember); font-weight: 600; }
+h3 { font-size: 1.7rem; margin-bottom: 12px; }
+img { margin-bottom: 14px; }
+.vi-account { margin: 0; display: grid; gap: 12px; }
+.vi-account dt { font-size: 0.9rem; color: var(--muted); }
+.vi-account dd { margin: 0; font-weight: 600; color: var(--ink); letter-spacing: 0.02em; }

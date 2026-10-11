@@ -1,0 +1,33 @@
+:host { display: block; }
+.vi-pagehero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 60px;
+  color: #fff;
+  background:
+    radial-gradient(700px 320px at 90% 0%, rgba(244, 166, 42, 0.22), transparent 60%),
+    linear-gradient(160deg, var(--ink) 0%, var(--ink-2) 100%);
+}
+.vi-pagehero.vi-tall { padding: 64px 0 110px; }   /* Events, Study classes, Publications, Get in touch */
+.vi-om {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Hind', sans-serif;
+  font-size: clamp(8rem, 22vw, 17rem);
+  line-height: 1;
+  color: rgba(244, 166, 42, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+h1 { position: relative; color: #fff; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; }
+.vi-quote {
+  position: relative;
+  margin: 14px 0 0;
+  max-width: 34ch;
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  font-style: italic;
+  color: var(--saffron);
+}

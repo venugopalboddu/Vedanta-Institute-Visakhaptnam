@@ -1,25 +1,4 @@
-.responsive-image {
-  width: 1076px;
-  max-width: 100%;
-  height: auto;
-}
-@media (max-width: 375px) {
-  .footer {
-    margin-top: -91px;
-  }
-  .am {
-    position: relative;
-    bottom: 45px;
-    left: 77px;
-  }
-}
-@media (max-width: 425px) {
-  .footer {
-    margin-top: -91px;
-  }
-  .am {
-    position: relative;
-    bottom: 45px;
-    left: 77px;
-  }
-}
+:host { display: block; }
+/* text first, picture second on this page */
+.vi-split { grid-template-columns: 2fr minmax(220px, 1fr); }
+@media (max-width: 992px) { .vi-split { grid-template-columns: 1fr; } }

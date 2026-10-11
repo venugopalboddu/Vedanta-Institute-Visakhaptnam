@@ -1,0 +1,51 @@
+<app-page-hero title="Gallery" quote="You cannot believe in God until you believe in yourself."></app-page-hero>
+
+<section class="vi-section">
+  <div class="vi-wrap">
+    <article class="vi-split">
+      <img [src]="bannerImage" alt="Seminar at Andhra University Alumni Association">
+      <div>
+        <p>
+          S.V. Satyanarayana was invited to give a seminar titled
+          <span class="vi-accent">"The Key to Success"</span> on July 25, 2024. The event, organized by the Andhra
+          University Alumni Association (AAA), featured Satyanarayana, a distinguished former student of Andhra
+          University. He had a notable corporate career in both India and the UK before dedicating himself to the
+          in-depth study and research of Vedanta Philosophy under the guidance of his spiritual guru, A. Parthasarathy,
+          spending five years at the Vedanta Academy.
+        </p>
+        <p>
+          Satyanarayana is now a resource at the Vedanta Institute Visakhapatnam, a charitable trust focused on the
+          holistic development of individuals to achieve peace and prosperity. Since 2006, he has been residing in
+          Visakhapatnam, conducting workshops on various management topics for corporates, personality development
+          sessions for college and school students, as well as public discourses and study classes on the Bhagavad
+          Gita and other scriptural texts. Here are some pictures from the event.
+        </p>
+      </div>
+    </article>
+
+    <div class="vi-photos">
+      <button type="button" *ngFor="let p of seminarPhotos; let i = index" (click)="open(p)"
+              [attr.aria-label]="'Open seminar photo ' + (i + 1)">
+        <img [src]="p" [alt]="'Seminar photo ' + (i + 1)" loading="lazy">
+      </button>
+    </div>
+
+    <p class="vi-caption">
+      Here are some pictures of S.V. Satyanarayana attending a training session for college students, where he
+      provided corporate training and taught Vedanta philosophy.
+    </p>
+
+    <div class="vi-photos">
+      <button type="button" *ngFor="let p of trainingPhotos; let i = index" (click)="open(p)"
+              [attr.aria-label]="'Open training photo ' + (i + 1)">
+        <img [src]="p" [alt]="'Training session photo ' + (i + 1)" loading="lazy">
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Full-screen viewer -->
+<div class="vi-lightbox" *ngIf="selected" (click)="close()" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="vi-lightbox-close" (click)="close()" aria-label="Close photo">&times;</button>
+  <img [src]="selected" alt="Enlarged photo" (click)="$event.stopPropagation()">
+</div>

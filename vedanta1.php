@@ -30,7 +30,7 @@ header('Access-Control-Allow-Headers: *');
      
       	$headers = 'From: Vedanta  <$email>' . "\r\n" .
       	           "Reply-To: $email" . "\r\n" .
-      	           "Bcc: venuchiru4444@gmail.com\r\n" .
+      	           "Bcc: venugopalboddu88@gmail.com\r\n" .
       	           "MIME-Version: 1.0\r\n" .
       	           "Content-Type: text/html; charset=ISO-8859-1\r\n"; 
         

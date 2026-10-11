@@ -1,0 +1,732 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "axiforma";
+  src: url("fonts/AxiformaBook.ttf");
+}
+@font-face {
+  font-family: "axiforma-med";
+  src: url("fonts/AxiformaMedium.otf") format("opentype");
+}
+@font-face {
+  font-family: "baskerville-reg";
+  src: url("fonts/BaskervilleBT.ttf"); 
+}
+@font-face {
+  font-family: "baskerville-italic";
+  src: url("fonts/BaskervilleItalicBT.ttf"); 
+}
+@font-face {
+  font-family: "playfair";
+  src: url("fonts/PlayfairDisplay.ttf"); 
+}
+@font-face {
+  font-family: "playfair-italic";
+  src: url("fonts/PlayfairDisplay-Italic.ttf"); 
+}
+@font-face {
+  font-family: "poppins";
+  src: url("fonts/Poppins-Thin.ttf"); 
+}
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
+}    
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.caps {
+  text-transform: uppercase;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+
+body {
+  margin: 0;
+}        
+
+.header a {
+  width: 20%;
+}
+.header {
+  background: transparent;
+  padding-block: 3% 1%;
+  position: relative;
+  z-index: 5;
+}
+.header .row {
+  align-items: center;
+}
+.header-menu {
+  color: #B9B9B9;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  padding: 29px 14px 29px 14px;
+  text-decoration: none;
+  position: absolute;
+  right: 20%;
+}
+.header-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #000;
+  font-size: 13px;
+}
+.vcf {
+  position: absolute;
+  width: 5%;
+  padding: 0% 2%;
+  margin-top: -2%;
+  background: none;
+}
+.header .btn {
+  background: #D78F54 0% 0% no-repeat padding-box;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 0px;
+  margin-block: -3% 7%;
+  margin-inline-start: 4%;
+  width: 25%;
+  padding-inline: 0%;
+  padding-block: 2%;
+  font-size: 15px;
+  position: absolute;
+  font-family: "axiforma-med";
+}
+
+.btn {
+  background: #1F3D50 0% 0% no-repeat padding-box;
+  border: 1.5px solid #1F3D50;
+  padding: 1% 4%;
+  color: #C4BED3;
+  font-family: "playfair";
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+.centre {
+  display: block;
+  margin-inline: auto;
+  margin-block-start: 5%;
+}
+a {
+  text-decoration: none;
+}
+
+.header1 {
+  color:#282828;
+  font-size: 3rem;
+  font-family: "playfair";
+  font-weight: normal;
+  letter-spacing: 0px;
+  margin-block: 0%;
+}
+.content-wrap .header1 {
+  font-size: 4rem;
+  color:#fff; 
+  text-align: left;
+}
+.content-wrap .header2 {
+  text-align: left;
+  letter-spacing: 4px;
+  line-height: 2;
+  padding-block: 3% 0%;
+}
+
+.content-wrap .w-50 {
+  padding-inline-start: 3%;
+}
+.content-wrap .w-50 {
+  width: 45%;
+}
+.header2 {
+  color: #D78F54;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "axiforma";
+  font-weight: normal;
+  letter-spacing: 6.9px;
+  margin-block: 0%;
+}
+.header3 {
+  color: #667168;
+  text-align: center;
+  font-size: 17px;
+  font-family: "baskerville-reg";
+  font-weight: normal;
+}
+.quote {
+  color: #282828;
+  text-align: center;
+  font-size: 25px;
+  font-family: "playfair-italic";
+  letter-spacing: 0px;
+}
+.main-event {
+  color:#282828; 
+  font-size: 1.1rem;
+  font-family: "baskerville-reg";
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding-bottom: 1%;
+  line-height: 1;
+  margin-block: 1%;
+}
+.para-text {
+  color:#282828; 
+  font-size: 1.2rem;
+  font-family: "baskerville-reg";
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 1.6;
+/*  padding: 4% 10% 4% 10%; */
+}
+.happiness_para {
+  padding-top: 5%;
+}
+.italics {
+  font-family: "playfair-italic";
+}
+i {
+  font-family: "playfair-italic";
+  font-style: normal;
+}
+.bit {
+  font-family: "baskerville-italic";
+  font-style: normal;
+}
+.content-wrap {
+  margin-top: -4%;
+}
+#trailer {
+  max-width: 100%;
+}
+.main-content {
+  margin-top: -16%;
+  position: absolute;
+  width: 100%;
+}
+.main-content h2 {
+  padding-bottom: 0%;
+  margin-top: 0%;
+  margin-bottom: 3%;
+  line-height: 1.5;
+}
+.why-gita {
+  text-align: center;
+  background-color: #fff;
+  padding-block: 0% 7%;
+}
+.grey {
+  background-color: rgba(149, 152, 161, 0.3);
+  padding-block: 2%;
+  padding-inline: 5% 2%;
+  text-align: left;
+  margin-block-end: 5%;
+}
+.grey .bigger {
+  font-size: 2.2rem;
+  margin-block: 0%;
+}
+.why-gita .para-text {
+  padding: 4% 10% 0% 10%;
+}
+.why-gita .header2 {
+  margin-block: 1.5% 2%;
+}
+.call-to-happiness {
+  background-color: #fff;
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+.happiness-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+.call-to-happiness h2 {
+  text-align: left;
+}
+.call-to-happiness h1 {
+  text-align: left;
+}
+.call-to-happiness p {
+  text-align: left;
+  padding-inline-end: 15%;
+}
+.call-to-happiness button {
+  background-color: #F4ECE1;
+  color: #282828;
+  margin-top: -19%;
+  margin-left: 105%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  width: 55%;
+}
+.call-to-happiness a {
+  text-decoration: none;
+  color: #282828;
+}
+.call-to-happiness .above {
+  padding-inline: 5%;
+  width: 90%;
+}
+.happiness {
+  position: relative;
+  width: 100%;
+  z-index: 5;
+  margin-top: -5%;
+}
+.happiness-img {
+  width: 100%;
+  margin-left: -5%;
+}
+.call {
+  margin-top: -1%;
+  padding-bottom: 0%;
+}
+.reg-btn {
+  background: none;
+  border: none;
+  color: #F3F3F3;
+  text-transform: uppercase;
+  width: 35%;
+  font-family: "axiforma";
+  font-size: 23px;
+  letter-spacing: 6.9px;
+  margin-left: 2%;
+  cursor: pointer;
+}
+.inner-voice {
+  margin-top: -7%;
+  padding-block-end: 10%;
+}
+.inner-voice .row {
+  background-image: url(styles/images/yajna/evenings.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 15% 10%;
+}
+.inner-voice img {
+ width: 10%;
+ margin-left: auto;
+ margin-right: auto;
+ padding-block: 10%;
+ display: block;
+ opacity: 0.5;
+}
+.inner-voice .w-50 {
+  padding-inline: 3% 5%;
+}
+.inner-voice .gita {
+ color: #667168;
+ margin-top: 5%;
+ text-align: center;
+}
+sup {
+  top: -0.5em;
+  font-size: 12px;
+}
+.reg-form {
+  padding-block: 5% 2%;
+  background: #1F3D50 0% 0% no-repeat padding-box;
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+  text-align: center;
+}
+.reg-form h1 {
+ color: #C4BED3;
+ text-align: left;
+ padding-left: 5%;
+}
+
+.sunandaji-section {
+  padding-block: 5% 0%;
+}
+.sunandaji-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+}
+.sunandaji-section h1 {
+  text-align: left;
+  padding-inline-start: 10%;
+}
+.sunandaji-section h2 {
+  text-align: left;
+  padding-inline-start: 10%;
+}
+.sunandaji-section p {
+  padding-inline: 10% 20%;
+  text-align: left;
+}
+.sunandaji-img {
+  width: 80%;
+  margin-inline-start: 15%;
+}
+.about-sunandaji {
+  
+}
+.gita-yajna {
+   padding-block: 5% 0%;
+   text-align: center;
+}
+.gita-yajna .para-text {
+  padding: 4% 10% 4% 10%;
+}
+.slider-container {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 25%; 
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding-block: 1%;
+  margin-block-start: 5%;
+}
+
+.footer p {
+  font-family: "poppins";
+  font-size: 14px;
+  padding: 1% 0%;
+  margin: 0;
+}
+
+ .footer a {
+  color: #fff;
+ }
+
+.social {
+  justify-content: center;
+ }
+
+.social a {
+  display:inline-block;
+  width:55px;
+  padding-inline: 0.5%;
+}
+
+.footer a img {
+  width: 80%;
+  padding: 0%;
+  background: #fff;
+  border-radius: 80%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+  .sunandaji-section {
+/*    height: 125% !important;*/
+  }
+  .gita-yajna {
+/*    margin-top: 266% !important;*/
+  }
+}
+
+@media only screen and (max-width: 768px) {
+ .desktop {
+    display: none;
+  }
+  .mobile {   
+    display: block;
+  }
+  .row {
+    flex-direction: column; 
+  }
+  .w-50 {
+    width: 100%;
+  }
+  .vcf {
+    width: 10%;
+    padding: 3% 0%;
+    left: 5%;
+  }
+
+  .header .btn {
+    padding-block: 2%;
+    margin-block: 1%;
+    margin-inline: 1%;
+    width: 30%;
+    right: 8%;
+  }
+  #trailer {
+    max-width: 100%;
+    height: auto;
+  }
+  .header1 {
+    font-size: 2rem !important;
+    padding-inline: 5%;
+  }
+  .header2 {
+    font-size: 14px !important;
+  }
+  .para-text {
+    font-size: 16px;
+    padding-inline: 5% !important;
+    padding-block: 5% !important;
+  }
+  .quote {
+    font-size: 20px;
+  }
+  .main-event {
+    font-size: 1rem;
+    letter-spacing: 0px;
+  }
+  .content-wrap {
+    width: 100%;
+    margin-left: 0%;
+    margin-top: -26%;
+  }
+  .content-wrap .w-50 {
+    width: 100%;
+  }
+  .content-wrap .header2 {
+    letter-spacing: 2px;
+  }
+  .main-content {
+    margin-top: -70%;
+    margin-left: 0%;
+    padding-inline-start: 0%;
+    width: 94%;
+  }
+  .main-content .header1 {
+    font-size: 3rem !important;
+    padding-inline-start: 0%;
+  }
+  .main-content h2 {
+    font-size: 15px;
+    padding-block: 8% 0%;
+  }
+  .grey {
+    padding-block: 10%;
+    padding-inline: 5% 2%;
+    margin-block-end: 10%;
+  }
+  .grey .bigger {
+    font-size: 1.4rem;
+    letter-spacing: 0px;
+  }
+  .why-gita {
+    padding-block: 0% 10%;
+  }
+  .why-gita .para-text {
+    padding: 0% 6% 0% 6%;
+  }
+  .happiness {
+    margin-top: 5%;
+  }
+  .happiness-row {
+    display: block;
+  }
+  .happiness-img {
+    width: 90%;
+    margin: auto;
+  }
+  .call-to-happiness {
+    padding-block-end: 10%;
+  }
+  .call-to-happiness h1 {
+    text-align: center;
+  }
+  .call-to-happiness h2 {
+    text-align: center;
+    padding-inline-start: 0%;
+  }
+  .call-to-happiness p {
+    text-align: center;
+    padding-inline: 2%;
+  }
+  
+  .reg-btn {
+    font-size: 12px;
+  }
+  .reg-form {
+    width: 100%;
+    margin: auto;
+    margin-block-end: 10%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+  }
+  .reg-form h1 {
+    text-align: center;
+    margin-bottom: 1%;
+    padding-top: 5%;
+    padding-left: 0%;
+  }
+
+   .inner-voice .w-50 {
+    padding-inline: 0%;
+   }
+   .inner-voice img {
+     width: 35%;
+   }
+   .inner-voice .gita {
+     margin-top: 10%;
+     margin-bottom: -5%;
+   }
+   .reg-form {
+     margin: auto;
+     width: 100%;
+   }
+   .sunandaji-section {
+     padding-left: 0%;
+     text-align: center;
+   }
+   .sunandaji-row {
+      display: block;
+   }
+   .sunandaji-section h1 {
+      text-align: center;
+      margin-left: -11%;
+   }
+   .sunandaji-section h2 {
+      text-align: center;
+      padding-inline-start: 0%;
+      margin-left: 3%;
+   }
+    .sunandaji-section p {
+      padding-inline: 5%;
+      text-align: center;
+    }
+   .sunandaji-img {
+     width: 90%;
+     margin-left: 0%;
+   }
+  .about-sunandaji {
+    margin-inline-start: 0%;
+  }
+   .playButton {
+     width: 15%;
+     left: 40%;
+     top: 87%;
+   }
+   .gita-yajna {
+     padding-block-start: 0%;
+   }
+   
+   .slider_mob {
+     position: relative;
+     width: 95%;
+     max-width: 360px;
+     overflow: hidden;
+     border: 2px solid #ddd;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     margin: auto;
+   }
+
+    .slides_mob {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide_mob {
+      min-width: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide_mob img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .prev_mob, .next_mob {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .prev_mob {
+      left: 10px;
+    }
+
+    .next_mob {
+      right: 10px;
+    }
+    .footer {
+      padding-block: 7%;
+      margin-block-start: 15%;
+    }
+    .footer .row {
+      flex-direction: row;
+      padding: 3% 0%;
+    }
+    .footer p {
+      font-size: 13px;
+      padding-block: 1% 0%;
+      padding-inline: 4%;
+    }
+} 

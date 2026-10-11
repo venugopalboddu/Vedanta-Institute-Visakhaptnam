@@ -29,8 +29,8 @@ header('Access-Control-Allow-Headers: *');
         $subject = "Vedanta Institute Visakhapatnam";
      
       	$headers = 'From: Vedanta Institute Visakhapatnam  <$email>' . "\r\n" .
-      	           "Reply-To: venuchiru4444@gmail.com\r\n" .
-      	           "Bcc: venuchiru4444@gmail.com\r\n" .
+      	           "Reply-To: venugopalboddu88@gmail.com\r\n" .
+      	           "Bcc: venugopalboddu88@gmail.com\r\n" .
       	           "MIME-Version: 1.0\r\n" .
       	           "Content-Type: text/html; charset=ISO-8859-1\r\n"; 
         
@@ -38,7 +38,7 @@ header('Access-Control-Allow-Headers: *');
 
 $email_content = '<html><body>';
 $email_content .= "<h2 style='color:#FF5733'>Vedanta Institute Visakhapatnam</h2>";
-$email_content .= '<img src="http://vedantavisakhapatnam.org/img/om5.png" height="50px"/>';
+$email_content .= '<img src="https://vedantavisakhapatnam.org/assets/img/om5.png" height="50px"/>';
 $email_content .= "<hr/>";
 $email_content .= "<h3 style='color: green'>Hi, <span style='color:#FF5733'>". $uname .".</span><br/>Thank you for visiting our site. We will get back to you soon.</h3>";
 $email_content .= "<hr/>";

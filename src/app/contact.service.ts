@@ -8,10 +8,10 @@ export class ContactService {
 
   constructor(private ht: HttpClient) { }
 
-  postData(d) {
-    return this.ht.post('http://vedantavisakhapatnam.org/vedanta1.php', d);
+  postData(d: { name: any; email: any; message: any; }) {
+    return this.ht.post('https://www.vedantavisakhapatnam.org/vedanta1.php', d);
   }
-postData1(d) {
-  return this.ht.post('http://vedantavisakhapatnam.org/vedanta2.php', d);
+postData1(d: { name: any; email: any; message: any; }) {
+  return this.ht.post('https://www.vedantavisakhapatnam.org/vedanta2.php', d);
  }
 }

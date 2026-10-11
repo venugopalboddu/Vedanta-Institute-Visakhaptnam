@@ -1,0 +1,7 @@
+:host { display: block; }
+.vi-class-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; }
+.vi-map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4 / 3; background: var(--ink); }
+.vi-map iframe { width: 100%; height: 100%; border: 0; }
+.vi-meta { font-size: 1.1rem; }
+.vi-back { margin-top: 22px; }
+@media (max-width: 992px) { .vi-class-grid { grid-template-columns: 1fr; gap: 28px; } }

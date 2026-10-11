@@ -341,7 +341,6 @@ header .intro-text {
 }
 #car-types p {
 	color: #333;
-	text-align: justify;
 }
 .space {
 	margin-top: 40px;
@@ -493,7 +492,7 @@ header .intro-text {
 	margin-top: 10px;
 	margin-bottom: 15px;
 	padding-bottom: 15px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.09) !important;	
 }
 #contact h4 {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.09);
@@ -684,6 +683,7 @@ Footer
   margin: 0 10px;
 }
 }
+
 /* Small devices (tablets, 768px and up) 
 =========================================================*/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -698,7 +698,9 @@ Footer
 		margin-left: 1rem;
 		padding-right: 1rem;
 	}
-
+	.txt_label{
+		margin-left: -2rem;
+	   }	
 }
 
 @media (max-width:425px) {
@@ -708,4 +710,7 @@ Footer
 		padding-right: 1rem;	
 	}
 	
+   .txt_label{
+	margin-left: -2rem;
+   }	
 }

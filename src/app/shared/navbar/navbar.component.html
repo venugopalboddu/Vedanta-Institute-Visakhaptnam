@@ -1,0 +1,25 @@
+<header class="vi-nav">
+  <div class="vi-wrap vi-nav-inner">
+    <a routerLink="/home" class="vi-brand" (click)="closeMenu()">
+      <img src="assets/img/om5.png" alt="Om" width="57" height="57">
+      <span class="vi-brand-text">
+        <span class="vi-brand-name">Vedanta</span>
+        <span class="vi-brand-sub">Institute Visakhapatnam</span>
+      </span>
+    </a>
+
+    <button class="vi-burger" type="button" (click)="toggleMenu()"
+            [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="vi-links" [class.open]="menuOpen" aria-label="Main">
+      <ng-container *ngFor="let l of links">
+        <a *ngIf="l.path" [routerLink]="l.path" routerLinkActive="active"
+           [class.vi-nav-cta]="l.cta" (click)="closeMenu()">{{ l.label }}</a>
+        <a *ngIf="l.href" [href]="l.href" target="_blank" rel="noopener"
+           (click)="closeMenu()">{{ l.label }}</a>
+      </ng-container>
+    </nav>
+  </div>
+</header>
